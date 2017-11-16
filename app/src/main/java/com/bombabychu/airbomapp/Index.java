@@ -27,8 +27,9 @@ public class Index extends AppCompatActivity {
         settings.setUseWideViewPort(true);
         settings.setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
-        webView.loadUrl("file:///android_assets/www/index.html");
+        webView.loadUrl("file:///android_asset/www/index.html");
         frame.addView(webView);
         setContentView(frame);
     }
 }
+

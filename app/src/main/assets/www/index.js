@@ -23,11 +23,13 @@ app.member = (() => {
             var id = $('#id').val();
             var pass = $('#password').val();
             //console.log('입력된 id, pass : ' + id + ' , ' + pass);
+
             $.ajax({
-                url: 'member.json',
-                type: 'post',
+                url: "member.json",
+                contentType: "text/plain; charset=UTF-8",
+                type: 'GET',
                 data: {id: id, pass: pass},
-                dataType: 'json',
+                dataType: 'text',
                 success: d => {
                     //alert('진입 성공');
                     $.each(d, (i, o) => {
